@@ -11,7 +11,7 @@ Job Details
 
     <!-- Hero Area Start-->
     <div class="slider-area ">
-        <div class="single-slider section-overly slider-height1 d-flex align-items-center"
+        <div class="single-slider section-overly slider-height2 d-flex align-items-center"
             data-background="{{ asset('public-theme/assets/img/hero/about.jpg')}}">
             <div class="container">
                 <div class="row">
@@ -78,7 +78,7 @@ Job Details
                             <a href="{{route('applied',$jobs->id)}}" class="btn">Apply Now</a>
                         </div>
                     </div>
-                     <div class="post-details4  mb-50">
+                    <div class="post-details4  mb-50">
                         <!-- Small Section Tittle -->
                         <div class="small-section-tittle">
                             <h4>Company Information</h4>

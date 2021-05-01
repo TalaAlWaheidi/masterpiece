@@ -40,22 +40,23 @@ All Jobs
                         <div class="single-job-items mb-30">
                             <div class="job-items">
                                 <div class="company-img">
-                                    <a href="/pub/alljobs/details/{{$value->id}}"><img
-                                            style="height: 100px; with:100px;"
-                                            src="{{asset("uploads/images/$value->job_image")}}" alt=""></a>
+                                    {{-- <a href="/pub/alljobs/details/{{$value->id}}"> --}}
+                                    <a href="{{ route('job.details',$value->id) }}">
+                                        <img src="{{asset("uploads/images/$value->job_image")}}" alt=""></a>
                                 </div>
                                 <div class="job-tittle job-tittle2">
-                                    <a href="/pub/alljobs/details/{{$value->id}}">
+                                    <a href="{{ route('job.details',$value->id) }}">
                                         <h4>{{ $value->job_title }}</h4>
                                     </a>
                                     <ul>
                                         <li>{{ $value->job_company }}</li>
-                                        <li  style="margin-right:38px"><i class="fas fa-map-marker-alt"></i>{{ $value->job_location }}</li>
+                                        <li style="margin-right:38px"><i
+                                                class="fas fa-map-marker-alt"></i>{{ $value->job_location }}</li>
                                         <li>{{ $value->job_salary }}</li>
                                     </ul>
                                 </div>
                             </div>
-                             <div class="items-link items-link2 f-right">
+                            <div class="items-link items-link2 f-right">
                                 <a href="{{route('applied',$value->id)}}">Apply Now</a>
                             </div>
                         </div>
@@ -70,25 +71,25 @@ All Jobs
 </div>
 <!-- Job List Area End -->
 <!--Pagination Start  -->
- <div class="pagination-area pb-115 text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="single-wrap d-flex justify-content-center">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-start">
-                            <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                            <li class="page-item"><a class="page-link" href="#">02</a></li>
-                            <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            <li class="page-item"><a class="page-link" href="#"><span class="ti-angle-right"></span></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{-- <div class="pagination-area pb-115 text-center">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-xl-12">--}}
+{{--                <div class="single-wrap d-flex justify-content-center">--}}
+{{--                    <nav aria-label="Page navigation example">--}}
+{{--                        <ul class="pagination justify-content-start">--}}
+{{--                            <li class="page-item active"><a class="page-link" href="#">01</a></li>--}}
+{{--                            <li class="page-item"><a class="page-link" href="#">02</a></li>--}}
+{{--                            <li class="page-item"><a class="page-link" href="#">03</a></li>--}}
+{{--                            <li class="page-item"><a class="page-link" href="#"><span class="ti-angle-right"></span></a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </nav>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <!--Pagination End  -->
 
 @endsection

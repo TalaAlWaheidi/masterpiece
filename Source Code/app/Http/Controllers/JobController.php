@@ -72,8 +72,8 @@ class JobController extends Controller
         $jobs->job_location = $request->input('job_location');
         $jobs->job_salary = $request->input('job_salary');
         $jobs->job_qualification = $request->input('job_qualification');
-        $jobs->company_email=$request->input('company_email');
-        $jobs->company_phone=$request->input('company_phone');
+        $jobs->company_email = $request->input('company_email');
+        $jobs->company_phone = $request->input('company_phone');
         $jobs->job_image = $filename;
         $jobs->save();
 
@@ -132,8 +132,8 @@ class JobController extends Controller
         $job->job_location = $request->input('job_location');
         $job->job_salary = $request->input('job_salary');
         $job->job_qualification = $request->input('job_qualification');
-        $job->company_email=$request->input('company_email');
-        $job->company_phone=$request->input('company_phone');
+        $job->company_email = $request->input('company_email');
+        $job->company_phone = $request->input('company_phone');
         $job->job_image = $filename;
         $job->save();
         return redirect()->route('job.all');
@@ -169,17 +169,21 @@ class JobController extends Controller
     public function showall(Job $job)
     {
         //        $category = Category::all();
-        $job = Job::all();
+        $job = Job::paginate(10);
         $categories = Category::all();
         return view('public-view.all-jobs', compact('job', 'categories'));
     }
 
     public function Search()
     {
-        $search=$_GET['select'];
-        $searchtitle=$_GET['title'];
+        $search = $_GET['select'];
+        $searchtitle = $_GET['title'];
+        $result = Job::where('job_location', 'like', '%' . $search . '%')->where('job_title', 'like', '%' . $searchtitle . '%')->paginate(10);
 
-        $result=Job::where('job_location','like','%'.$search.'%')->where('job_title','like','%'.$searchtitle.'%')->paginate(10);
-        return view('public-view.search',compact('result'));
+        //        if ($result=true)
+        return view('public-view.search', compact('result'));
+        //     else
+        //            return view('public-view.search')->with('error','you dont have access');
+        //
     }
 }

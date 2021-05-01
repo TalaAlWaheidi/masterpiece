@@ -142,7 +142,7 @@
                                             here, your demo address.</p>
                                     </li>
                                     <li><a href="#">Phone : +8880 44338899</a></li>
-                                    <li><a href="#">Email : info@colorlib.com</a></li>
+                                    <li><a href="#">Email : info@imhere.com</a></li>
                                 </ul>
                             </div>
 
@@ -193,35 +193,6 @@
                         </div>
                     </div>
                 </div>
-                <!--  -->
-                {{-- <div class="row footer-wejed justify-content-between">
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <!-- logo -->
-                        <div class="footer-logo mb-20">
-                            <a href="index.html"><img src="{{asset('public-theme/assets/img/logo/logo2_footer.png')}}"
-                alt=""></a>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div class="footer-tittle-bottom">
-                <span>5000+</span>
-                <p>Talented Hunter</p>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <div class="footer-tittle-bottom">
-                <span>451</span>
-                <p>Talented Hunter</p>
-            </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <!-- Footer Bottom Tittle -->
-            <div class="footer-tittle-bottom">
-                <span>568</span>
-                <p>Talented Hunter</p>
-            </div>
-        </div>
-        </div> --}}
         </div>
         </div>
         <!-- footer-bottom area -->
